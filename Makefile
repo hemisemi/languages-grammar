@@ -20,6 +20,8 @@ OBJ := $(SRC:$(SRCDIR)/%.cpp=$(BUILDDIR)/%.o)
 
 ################################################################################
 
+all: release
+
 release: lib$(TARGET).so
 
 debug: lib$(TARGET)-debug.so
