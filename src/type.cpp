@@ -19,7 +19,7 @@ const std::string & type::id() const{
 }
 
 const std::vector<function *> & type::constructors() const{
-    return _rules;
+	return _constructors;
 }
 
 void type::add_constructor(function *f){
@@ -41,10 +41,6 @@ bool type::operator <(const type & t) const{
 }
 
 std::ostream & operator<<(std::ostream & out, const ulr::type & t){
-	if(t.type() == ulr::type::terminal)
-        out << "<";
     out << t.id();
-	if(t.type() == ulr::type::terminal)
-        out << ">";
     return out;
 }
