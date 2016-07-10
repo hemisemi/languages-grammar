@@ -1,10 +1,10 @@
 #include "regex.h"
 
 namespace hsm{
-namespace ulr{
+namespace lang{
 
-regex::regex(const std::regex & exp){
-	exp;
+regex::regex(const std::string & exp) : type(exp){
+	_str = exp;
 }
 
 }

@@ -1,15 +1,14 @@
 #pragma once
 
 #include <string>
-#include <regex>
 #include "type.h"
 
 namespace hsm{
-namespace ulr{
+namespace lang{
 
-class regex : public ulr::type{
+class regex : public lang::type{
 public:
-	regex(const std::regex & regex);
+	regex(const std::string & regex);
 
 private:
 	std::string _str;

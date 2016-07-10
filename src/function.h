@@ -8,7 +8,8 @@
 
 #include "ref.h"
 
-namespace ulr{
+namespace hsm{
+namespace lang{
 
 class type;
 class grammar;
@@ -24,10 +25,12 @@ public:
 	bool operator!=(const function &) const;
 
 private:
+	std::string _name;
 	const type *_result;
 	std::vector<ref<const type>> _params;
 };
 
 }
+}
 
-std::ostream & operator<<(std::ostream & out, const ulr::function & r);
+std::ostream & operator<<(std::ostream & out, const hsm::lang::function & r);

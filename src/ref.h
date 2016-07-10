@@ -5,7 +5,8 @@
 #include <algorithm>
 #include <iterator>
 
-namespace ulr{
+namespace hsm{
+namespace lang{
 
 template<class T>
 class ref{
@@ -119,4 +120,5 @@ private:
     T *_ptr;
 };
 
+}
 }

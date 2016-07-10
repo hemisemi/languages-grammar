@@ -2,10 +2,13 @@
 #include "grammar.h"
 #include "type.h"
 
-namespace ulr{
+namespace hsm{
+namespace lang{
 
-function::function(const type *red, const std::vector<ref<const type>> & stream) : _params(stream){
-	_result = red;
+function::function(const std::string & name, const std::vector<ref<const type>> & params, const type *result_type){
+	_name = name;
+	_params = params;
+	_result = result_type;
 }
 
 const type *function::result() const{
@@ -33,8 +36,9 @@ bool function::operator !=(const function & r) const{
 }
 
 }
+}
 
-std::ostream & operator<<(std::ostream & out, const ulr::function & r){
+std::ostream & operator<<(std::ostream & out, const hsm::lang::function & r){
     for(size_t i = 0; i < r.parameters().size(); ++i){
         if(i > 0)
             out << ", ";

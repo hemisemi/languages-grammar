@@ -7,7 +7,8 @@
 
 #include "function.h"
 
-namespace ulr{
+namespace hsm{
+namespace lang{
 
 class type;
 
@@ -16,23 +17,24 @@ public:
     grammar();
     ~grammar();
 
-	const ulr::type *type(const std::string &) const;
+	const lang::type *type(const std::string &) const;
 
-	const std::map<std::string, const ulr::type *> & types() const;
-	const std::vector<ulr::function *> & functions() const;
+	const std::map<std::string, const lang::type *> & types() const;
+	const std::vector<lang::function *> & functions() const;
 
-	void add_type(const ulr::type *);
+	void add_type(const lang::type *);
 
-	ulr::type *new_type(const std::string & name);
-	ulr::type *new_type(const std::string & name, const std::regex & regex);
+	lang::type *new_type(const std::string & name);
+	lang::type *new_type(const std::string & name, const std::regex & regex);
 
 	void bind();
 
 private:
-	std::vector<ulr::function*> _functions;
-	std::map<std::string, const ulr::type*> _types;
+	std::vector<lang::function*> _functions;
+	std::map<std::string, const lang::type*> _types;
 };
 
 }
+}
 
-std::ostream & operator<<(std::ostream & out, const ulr::grammar & g);
+std::ostream & operator<<(std::ostream & out, const hsm::lang::grammar & g);

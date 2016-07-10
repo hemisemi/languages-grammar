@@ -1,7 +1,8 @@
 #include "type.h"
 #include "function.h"
 
-namespace ulr{
+namespace hsm{
+namespace lang{
 
 template<>
 std::list<ref<const type>*> ref<const type>::_unbound = std::list<ref<const type>*>();
@@ -39,8 +40,9 @@ bool type::operator <(const type & t) const{
 }
 
 }
+}
 
-std::ostream & operator<<(std::ostream & out, const ulr::type & t){
+std::ostream & operator<<(std::ostream & out, const hsm::lang::type & t){
     out << t.id();
     return out;
 }

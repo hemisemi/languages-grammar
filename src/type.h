@@ -4,7 +4,8 @@
 #include <vector>
 #include <set>
 
-namespace ulr{
+namespace hsm{
+namespace lang{
 
 class function;
 
@@ -28,5 +29,6 @@ private:
 };
 
 }
+}
 
-std::ostream & operator<<(std::ostream & out, const ulr::type & t);
+std::ostream & operator<<(std::ostream & out, const hsm::lang::type & t);

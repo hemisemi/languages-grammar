@@ -1,6 +1,14 @@
 #include "range.h"
 
-range::range()
-{
+namespace hsm{
+namespace lang{
 
+namespace rx{
+
+range::range(){
+	//
+}
+
+}
+}
 }

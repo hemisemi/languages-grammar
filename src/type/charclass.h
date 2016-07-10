@@ -4,7 +4,7 @@
 #include "type.h"
 
 namespace hsm{
-namespace ulr{
+namespace lang{
 
 class charclass{
 public:
