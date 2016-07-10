@@ -6,7 +6,7 @@
 #include <list>
 #include <string>
 
-#include "ref.h"
+#include "typeref.h"
 
 namespace hsm{
 namespace lang{
@@ -16,9 +16,9 @@ class grammar;
 
 class function{
 public:
-	function(const std::string & name, const std::vector<ref<const type>> & params, const type *result_type);
+	function(const std::string & name, const std::vector<typeref> & params, const type *result_type);
 
-	const std::vector<ref<const type>> & parameters() const;
+	const std::vector<typeref> & parameters() const;
 	const type *result() const;
 
 	bool operator==(const function &) const;
@@ -27,7 +27,7 @@ public:
 private:
 	std::string _name;
 	const type *_result;
-	std::vector<ref<const type>> _params;
+	std::vector<typeref> _params;
 };
 
 }

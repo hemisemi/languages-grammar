@@ -12,3 +12,4 @@ src/type/regex/range.h
 src/type/regex/range.cpp
 src/type/charclass.h
 src/type/charclass.cpp
+src/typeref.h

@@ -5,7 +5,7 @@
 namespace hsm{
 namespace lang{
 
-function::function(const std::string & name, const std::vector<ref<const type>> & params, const type *result_type){
+function::function(const std::string & name, const std::vector<typeref> & params, const type *result_type){
 	_name = name;
 	_params = params;
 	_result = result_type;
@@ -15,7 +15,7 @@ const type *function::result() const{
 	return _result;
 }
 
-const std::vector<ref<const type>> & function::parameters() const{
+const std::vector<typeref> & function::parameters() const{
 	return _params;
 }
 
